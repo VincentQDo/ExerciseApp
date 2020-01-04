@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Welcome from "./components/Welcome/Welcome";
+import Content from "./components/MainContent/Content";
 import "./style/App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App parallax">
       <NavBar />
       <Welcome />
+      <Content />
     </div>
   );
 }

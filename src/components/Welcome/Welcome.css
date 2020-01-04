@@ -1,6 +1,7 @@
-.jumbotron {
+div > .jumbotron {
   min-height: 95vh;
   background-color: inherit;
+  margin-bottom: 0px;
 }
 
 .container .row .col-sm {
