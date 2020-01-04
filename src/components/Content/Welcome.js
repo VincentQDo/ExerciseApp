@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/Welcome.css";
+import "./Welcome.css";
 
 const Welcome = () => {
   return (
@@ -12,7 +12,7 @@ const Welcome = () => {
               Things work out best for those who make the best of how things
               work out.
             </h5>
-            <button className="btn btn-outline-primary">Get started</button>
+            <button className="btn btn-outline-warning">Get started</button>
           </header>
         </div>
       </div>
