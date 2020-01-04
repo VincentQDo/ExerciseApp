@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./components/NavBar/NavBar";
-import Welcome from "./components/Content/Welcome";
+import Welcome from "./components/Welcome/Welcome";
 import "./style/App.css";
 
 function App() {
