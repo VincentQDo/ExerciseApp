@@ -1,0 +1,12 @@
+.jumbotron {
+  min-height: 95vh;
+  background-color: inherit;
+}
+
+.container .row .col-sm {
+  margin-bottom: 10vh;
+}
+
+.container .row .col-sm button {
+  margin-top: 2vh;
+}

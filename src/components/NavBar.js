@@ -1,57 +1,34 @@
-import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from "reactstrap";
+import React from "react";
 import "../style/NavBar.css";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand className="mr-auto" href="/">
-          {"V&A Exercise"}
-        </NavbarBrand>
-        <div>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              <NavItem>
-                <NavLink href="#">Home</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Exercise
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Upper Body</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Lower Body</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="#">Food</NavLink>
-              </NavItem>
-            </Nav>
-            <button className="btn btn-outline-primary">Login</button>
-          </Collapse>
-        </div>
-      </Navbar>
-    </div>
+    <nav>
+      <div>
+        <a className="logo" href="/">
+          Logo Brand
+        </a>
+      </div>
+      <ul className="nav-links">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">About</a>
+        </li>
+        <li>
+          <a href="/">Contact</a>
+        </li>
+        <li>
+          <a href="/">Resources</a>
+        </li>
+      </ul>
+      <div className="burger">
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
   );
 };
 

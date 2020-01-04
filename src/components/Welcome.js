@@ -1,13 +1,21 @@
 import React from "react";
-import Man_Doing_Warm_Up_Exercise_Cartoon from "../svg/Man_Doing_Warm_Up_Exercise_Cartoon.svg";
+import "../style/Welcome.css";
 
 const Welcome = () => {
   return (
-    <div>
-      <img
-        src={Man_Doing_Warm_Up_Exercise_Cartoon}
-        alt="man doing warm up exercise cartoon"
-      />
+    <div className="jumbotron d-flex align-items-center">
+      <div className="container text-center">
+        <div className="row">
+          <header className="col-sm">
+            <h1>Get Stronger Together</h1>
+            <h5>
+              Things work out best for those who make the best of how things
+              work out.
+            </h5>
+            <button className="btn btn-outline-primary">Get started</button>
+          </header>
+        </div>
+      </div>
     </div>
   );
 };
