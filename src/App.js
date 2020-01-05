@@ -1,18 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import Welcome from "./components/Welcome/Welcome";
-import Content from "./components/MainContent/Content";
-import Contact from "./components/ContactForm/Contact";
+import Homepage from "./components/Homepage";
+import ExercisePage from "./components/ExercisePage";
+import Food from "./components/Food";
 import "./style/App.css";
 
 function App() {
   return (
-    <div className="App parallax">
+    <Router>
       <NavBar />
-      <Welcome />
-      <Content />
-      <Contact />
-    </div>
+      <Switch>
+        <Route path="/" exact component={Homepage} />
+        <Route path="/exercise" component={ExercisePage} />
+        <Route path="/food" component={Food} />
+        <Route path="/" exact component={Homepage} />
+      </Switch>
+    </Router>
   );
 }
 

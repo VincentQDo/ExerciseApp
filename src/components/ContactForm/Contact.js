@@ -5,7 +5,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="wrapper d-flex align-items-center parallax">
+    <div className="wrapper d-flex align-items-center parallax" id="contact">
       <div className="container">
         <h2>Contact Form</h2>
         <Form>

@@ -5,7 +5,7 @@ const InputFields = props => {
   return (
     <div className="input-form">
       <input type="text" name={props.field} autoComplete="off" required></input>
-      <label for={props.field} className="label-name">
+      <label htmlFor={props.field} className="label-name">
         <span className="content-name">{props.field}</span>
       </label>
     </div>

@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -16,28 +17,34 @@ const NavBar = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav>
-      <Navbar color="dark" dark expand="md" className="bg-transparent">
-        <NavbarBrand href="/">Logo Brand</NavbarBrand>
-        <NavbarToggler
-          onClick={toggle}
-          className="navbar-toggler custom-toggler"
-        />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
+    <Navbar color="dark" dark expand="md" id="navbar">
+      <Link to="/">
+        <NavbarBrand>Lu Exercise Tracker</NavbarBrand>
+      </Link>
+      <NavbarToggler
+        onClick={toggle}
+        className="navbar-toggler custom-toggler"
+      />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <Link to="/exercise">
               <NavLink>Exercises</NavLink>
-            </NavItem>
-            <NavItem>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/food">
               <NavLink>Food</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>About</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </nav>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/#contact">
+              <NavLink>Contact Us</NavLink>
+            </Link>
+          </NavItem>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 };
 
