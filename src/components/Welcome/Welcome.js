@@ -12,7 +12,16 @@ const Welcome = () => {
               Things work out best for those who make the best of how things
               work out.
             </h5>
-            <button className="btn btn-outline-warning">Get started</button>
+            <button className="btn btn-outline-warning mr-4">
+              Get started
+            </button>
+            <a
+              href="#contact"
+              className="btn btn-outline-warning mr-4"
+              role="button"
+            >
+              Contact Us
+            </a>
           </header>
         </div>
       </div>
