@@ -1,6 +1,7 @@
 import React from "react";
 import "./Generic.css";
 import "../style/App.css";
+import "./ExercisePage.css";
 
 class ExercisePage extends React.Component {
   state = {
@@ -36,7 +37,7 @@ class ExercisePage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="excercise-page">
         {this.state.loading ? (
           <div>loading...</div>
         ) : (
