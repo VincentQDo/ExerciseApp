@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, FormGroup, Label, Input } from "reactstrap";
+import { Form, FormGroup } from "reactstrap";
 import InputField from "../InputsWithAnimation/InputFields";
 import "./Contact.css";
 
@@ -10,20 +10,13 @@ const Contact = () => {
         <h2>Contact Form</h2>
         <Form>
           <FormGroup>
-            <InputField field="Name" />
+            <InputField field="Name" type="text" />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleEmail">Email</Label>
-            <Input
-              type="email"
-              name="email"
-              id="exampleEmail"
-              placeholder="example@email.com"
-            />
+            <InputField field="Email" type="email" />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleText">Text Area</Label>
-            <Input type="textarea" name="text" id="exampleText" />
+            <InputField field="Comment" type="textarea" />
           </FormGroup>
           <button type="submit" className="btn btn-outline-warning">
             Submit
