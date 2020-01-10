@@ -4,21 +4,28 @@ import "../style/App.css";
 
 class ExercisePage extends React.Component {
   state = {
-    dataJson: null,
+    data: null,
     stateDataDescription: null,
     loading: true
   };
   async componentDidMount() {
-    const url = "https://wger.de/api/v2/exerciseinfo/";
-    const response = await fetch(url);
-    const responseData = await response.json();
+    let url = "https://wger.de/api/v2/exerciseinfo/";
+    let response = await fetch(url);
+    let responseData = await response.json();
+
+    while (responseData.next) {
+      console.log(responseData);
+      url = responseData.next;
+      response = await fetch(url);
+      responseData = await response.json();
+    }
+
     this.setState({ loading: false, data: responseData });
-    const dataDescription = this.state.data.results.map(
-      item => item.description
-    );
+    // map each item description into a div
+    const dataDescription = this.state.data.results.map(item => (
+      <div className="alert alert-success">{item.description}</div>
+    ));
     this.setState({ stateDataDescription: dataDescription });
-    console.log(dataDescription);
-    // this.setState({ data: dataDescription });
   }
 
   render() {
@@ -27,7 +34,9 @@ class ExercisePage extends React.Component {
         {this.state.loading ? (
           <div>loading...</div>
         ) : (
-          <div>{this.state.stateDataDescription}</div>
+          <div>
+            <div>{this.state.stateDataDescription}</div>
+          </div>
         )}
       </div>
     );
