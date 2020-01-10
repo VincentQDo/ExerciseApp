@@ -24,7 +24,8 @@
   text-decoration: none;
 }
 
-.navbar-nav > .nav-item .nav-link {
+.navbar-nav > .nav-item .nav-link,
+.navbar-nav > .nav-item .nav-link:focus {
   color: #ffc107;
   opacity: 0.9;
 }

@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
@@ -18,8 +10,8 @@ const NavBar = () => {
 
   return (
     <Navbar color="dark" dark expand="md" id="navbar">
-      <Link to="/">
-        <NavbarBrand>Lu Exercise Tracker</NavbarBrand>
+      <Link to="/" className="navbar-brand">
+        Lu Exercise Tracker
       </Link>
       <NavbarToggler
         onClick={toggle}
@@ -28,18 +20,13 @@ const NavBar = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <Link to="/exercise">
-              <NavLink>Exercises</NavLink>
+            <Link to="/exercise" className="nav-link">
+              Exercises
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/food">
-              <NavLink>Food</NavLink>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/#contact">
-              <NavLink>Contact Us</NavLink>
+            <Link to="/food" className="nav-link">
+              Food
             </Link>
           </NavItem>
         </Nav>
