@@ -3,6 +3,7 @@
   position: relative;
   height: 50px;
   display: flex;
+  margin: 20px 0px;
 }
 
 .input-form input {
@@ -43,6 +44,7 @@
 .input-form input:focus + .label-name .content-name,
 .input-form input:valid + .label-name .content-name {
   transform: translateY(-110%);
+  font-size: 20px;
   color: #ffc107;
 }
 
