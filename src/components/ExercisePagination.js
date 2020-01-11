@@ -1,33 +1,33 @@
 import React, { Component } from "react";
-
+// TODO need to acually implement the pagination (this is just the placeholder)
 export default class ExercisePagination extends Component {
   render() {
     return (
       <div>
         <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">
+          <ul className="pagination justify-content-center">
+            <li className="page-item disabled">
+              <a className="page-link" href="#" tabindex="-1">
                 Previous
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href={this.props.page}>
+            <li className="page-item">
+              <a className="page-link" href={this.props.page}>
                 1
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <a className="page-link" href="#">
                 2
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <a className="page-link" href="#">
                 3
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <a className="page-link" href="#">
                 Next
               </a>
             </li>
