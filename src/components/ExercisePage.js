@@ -4,7 +4,7 @@ import "../style/App.css";
 import "./ExercisePage.css";
 import ExercisePagination from "./ExercisePagination";
 import ExerciseCard from "./ExerciseCard";
-
+//TODO NEED TO REAFACTOR THIS FILE ASAP (IT LOOKS HORRENDOUS)
 class ExercisePage extends React.Component {
   state = {
     data: null,
