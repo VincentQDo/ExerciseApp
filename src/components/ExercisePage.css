@@ -1,3 +1,13 @@
 .excercise-page {
   padding-top: 58px;
 }
+
+.excercise-page > div > div .alert > p,
+li,
+em {
+  color: black;
+}
+
+.black-text {
+  color: black;
+}
