@@ -2,6 +2,12 @@
   padding-top: 58px;
 }
 
+.excercise-page > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .excercise-page > div > div .alert > p,
 li,
 em {

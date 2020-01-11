@@ -3,6 +3,7 @@ import "./Generic.css";
 import "../style/App.css";
 import "./ExercisePage.css";
 import ExercisePagination from "./ExercisePagination";
+import ExerciseCard from "./ExerciseCard";
 
 class ExercisePage extends React.Component {
   state = {
@@ -35,11 +36,11 @@ class ExercisePage extends React.Component {
       console.log(item.description);
       return (
         <div>
-          <div className="black-text">{item.name}</div>
-          <div
+          {/* <div
             className="alert alert-success"
             dangerouslySetInnerHTML={{ __html: item.description }}
-          />
+          /> */}
+          <ExerciseCard description={item.description} name={item.name} />
         </div>
       );
     });
