@@ -1,0 +1,7 @@
+.black-text {
+  color: black;
+}
+
+.black-text-children * {
+  color: black;
+}
